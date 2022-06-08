@@ -8,6 +8,9 @@ app.use(cors({
     origin: '*'
 }))
 
+app.get('/', (req,res) => {
+    res.send('Halo Ges')
+})
 app.get('/cuaca/:provinsi', getWeather)
 app.get('/gempa-terbaru', EQNew)
 app.get('/gempa-besar', EQBig)
